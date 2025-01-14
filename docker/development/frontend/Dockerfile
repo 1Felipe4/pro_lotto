@@ -1,4 +1,4 @@
-FROM node:10.17-alpine
+FROM node:20-alpine3.19
 
 RUN adduser -D nuxt \
     && mkdir /home/nuxt/app/ \
@@ -8,6 +8,6 @@ COPY ./frontend /home/nuxt/app/
 
 WORKDIR /home/nuxt/app/
 
-RUN npm i
+RUN npm install
 
 CMD while true; do sleep 30; done;
